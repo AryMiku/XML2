@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>test xml ชีสแรก</title>
+  </head>
+  <body>
+    <xml id="dsoTeacher" src="01.xml">
+    </xml>
+    <table>
+      <tr>
+        <td>รหัส<br></td>
+        <td><SPAN datasrc="#dsoTeacher" datafld="id"></td>
+      </tr>
+      <tr>
+        <td>ชื่อ <br></td>
+        <td><SPAN datasrc="#dsoTeacher" datafld="name"></td>
+      </tr>
+    </table>
+    <form>
+      <input type="button"  value="Prev" onclick="dsoTeacher.recordset.movePrevious()
+        if(dsoTeacher.recordset.BOF)
+          dsoTeacher.recordset.moveFirst();"
+      >
+      <input type="button"  value="Next" onclick="dsoTeacher.recordset.moveNext()
+        if(dsoTeacher.recordset.EOF)
+          dsoTeacher.recordset.moveLast();"
+      >
+      <input type="button" value="first" onclick="dsoTeacher.recordset.moveFirst()">
+      <input type="button" value="Last" onclick="dsoTeacher.recordset.moveLast()">
+    </form>
+  </body>
+</html>
